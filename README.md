@@ -19,11 +19,33 @@ Please also reference prior individual submissions for overall ideas.
 Each individual is tasked to specifically focus on their aspect while also supporting the integration and development of the project overall. The estimated timeline is described below
 
 Rough Timeline:
+
 Begin: 
+
 Start: 03/03/24
+
 Revised Proposal: 3/10/24
-Finished Physical Setup of Machine: 3/14/24
-Design and Layout Finished: 3/24/24
+
+Finished Physical Setup of Machine: 3/14
+
+Design and Layout Finished: 3/24
+
 Spring Break: 03/25-03/31
-Group Check In on Indivdual Development: 04/03/24
-Hard Deadline: 05/17/24
+
+Group Check In on Individual Development: 04/03
+
+(1)Second Group Check In on Individual Development: 04/12
+
+(2)Third Group Check In on Individual Development: 04/17
+
+(3)Fourth Group Check In on Individual Development: 05/01
+
+Final Integration and Testing of Machine: 05/01-05/08
+
+Report, Demo, and Submission: 05/09-05/15
+
+Hard Deadline: 05/17
+
+(1) We will focus on checking in on progress, offering support, and wholly considering the further steps of integration. The most important aspect is focusing on staying on time.
+(2) This is more trending toward complete finalization of each individual component. We will begin integrating our aspects.
+(3) Finalization of integration and begin testing of overall play and success. Look more depthly into continuity and making sure the game has a fun and useful function. This should be near complete for entire project.
