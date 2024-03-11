@@ -42,7 +42,11 @@ For the Ball return system we will use a ball return assembly, which includes a 
 
 
 Jacob - Scoring System/ Display
-Please also reference prior individual submissions for overall ideas. 
+
+Since this is a baseball themed pinball machine, the display system for scoring will reflect that. The LED matrix displays do a great job of replicating a score board that you would find in a baseball stadium. Work will be done to make the score board look like the score board from Wrigley Field.
+
+Integration will be the hardest part of this project, signals from the sensors on the playfield will need to be sent to a microcontroller for processing, then displayed. SPI communication protocol will be crucial between controllers for this project to work successfully. Using SPI protocol, multiple controllers can talk to one another, allowing dedicated controllers for certain tasks. This will make the core programming of certain functions a little easier. 
+
 
 Design
 Focuses on adding to UX and appealingness of continued play
