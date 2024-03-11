@@ -6,7 +6,7 @@ This repo is the central location for work contributed to the overall team proje
 
 Allocation of jobs and increased integration aspects:
 
-Fred - Gamefield 
+**Fred - Gamefield **
 
 Development 
 - Combination of various sensors and buttons with intent to be used as "triggers" for interaction, responce upon completion of game designed goals
@@ -33,6 +33,7 @@ Focuses on adding to UX and appealingness of continued play
 - Ivy background and baseball diamond
 - Score noises correlated to locational successes and multiball
 - Raspberry PI/Arduino used to play sound effects and Go Cubs Go at certain threshold win
+
 *all aspects of design are first to go if project timeline starts to fail because functionality is more essential*
 
 Each individual is tasked to specifically focus on their aspect while also supporting the integration and development of the project overall. The estimated timeline is described below
