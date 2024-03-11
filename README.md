@@ -14,7 +14,7 @@ Development
 - Motion Sensors (infrared, microwave, PIR) to be able to detect motion of ball in correlation to field for stats of distance of "hit" and rewards correlated
 - Pressure Sensors are considered as well to make "outs" where a player hits a pre determined spot to lose points/balls - under consideration due to cost and complex
 - Interaction compiled through Arduino or possible RSBPI
-- All development and component usage is possible to change during testing and implementation cycle depending on prefernce and strenght of each item*
+- All development and component usage is possible to change during testing and implementation cycle depending on prefernce and strenght of each item
 
 Integration
 - Implementation onto to field using the base of the game machine: buttons in back to get hit, motion sensors along sides to track and detect motion
@@ -27,6 +27,13 @@ Carlo - Paddle and Ball Return System
 Jacob - Scoring System/ Display
 Please also reference prior individual submissions for overall ideas. 
 
+Design
+Focuses on adding to UX and appealingness of continued play
+- Cubs theme
+- Ivy background and baseball diamond
+- Score noises correlated to locational successes and multiball
+- Raspberry PI/Arduino used to play sound effects and Go Cubs Go at certain threshold win
+*all aspects of design are first to go if project timeline starts to fail because functionality is more essential*
 
 Each individual is tasked to specifically focus on their aspect while also supporting the integration and development of the project overall. The estimated timeline is described below
 
