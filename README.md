@@ -22,6 +22,7 @@ Integration
 - The outcomes and prompts will be baseball centric and correlated to the them to continue continuity and game design.
 
 Parker - Multiball Feature
+
 The plan for this design piece is to create a multiball mode for a larger pinball project.
 This will be achieved using an Arduino Uno R3, two servo motors, cardboard, two touch sensitive buttons, and an infrared sensor.
 
