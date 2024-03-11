@@ -20,6 +20,7 @@ Integration
 - Implementation onto to field using the base of the game machine: buttons in back to get hit, motion sensors along sides to track and detect motion
 - LEDs and responce will be placed in various locations to celebrate success and give player feedback
 - The outcomes and prompts will be baseball centric and correlated to the them to continue continuity and game design.
+
 Parker - Multiball Feature
 
 Carlo - Paddle and Ball Return System
