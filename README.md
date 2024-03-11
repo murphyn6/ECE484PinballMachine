@@ -6,7 +6,7 @@ This repo is the central location for work contributed to the overall team proje
 
 Allocation of jobs and increased integration aspects:
 
-**Fred - Gamefield **
+Fred - Gamefield
 
 Development 
 - Combination of various sensors and buttons with intent to be used as "triggers" for interaction, responce upon completion of game designed goals
