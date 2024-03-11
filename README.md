@@ -35,6 +35,12 @@ Multiball mode is a must-have for any exciting pinball machine. It gives the pla
 
 Carlo - Paddle and Ball Return System
 
+Being a cubs themed pinball machine, the paddles will be from a design standpoint baseball bats, the paddles will be powered by an electromagnet, 
+a solenoid, which will be activated with a transistor and a diode, the arm of the paddle will be connected to a plunger and will interact with an end of stroke switch, which when it is closed gives the coil low resistance and high power so it can kick the ball (Paddle off), while when it is open it gives it more total resistance to the coil, also preventing it from burning if the player holds on to the paddle button (Paddle energized).
+
+For the Ball return system we will use a ball return assembly, which includes a coil, ball striker arm which pushes the ball ball to the launch area, the plunger which pushes into the coil, the track where the ball will roll, and spring between the plunger and the coil mounting bracket, this system will also be activated with a diode and a transistor.
+
+
 Jacob - Scoring System/ Display
 Please also reference prior individual submissions for overall ideas. 
 
