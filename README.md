@@ -24,9 +24,9 @@ Integration
 Parker - Multiball Feature
 
 The plan for this design piece is to create a multiball mode for a larger pinball project.
-This will be achieved using an Arduino Uno R3, two servo motors, cardboard, two touch sensitive buttons, and an infrared sensor.
+This will be achieved using an Arduino Uno R3, two servo motors, cardboard, and an infrared sensor.
 
-Once both buttons are hit by the pinball the outer servo motor will raise the gate of the "Multiball Area".
+When the Arduino responsible for running the Multiball system is reset, the outer servo motor will raise the gate of the "Multiball Area".
 After that the ball must be hit into the "Multiball Area" in order to trigger the infrared sensor.
 Once the infrared sensor is triggered the outer servo motor will close the gate while the inner servo motor releases the second ball into the "Multiball Area" with the first.
 Then, after a moment has passed, the first servo motor will reopen the gate and release both of the balls.
