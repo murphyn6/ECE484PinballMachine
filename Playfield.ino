@@ -1,112 +1,123 @@
-// Frederick Levins
-// ECE 484 Pinball Playfield
+// Frederick Levins ECE 484 Embedded Systems
+// Final Pinball Project
+// Playfield: This is the main code for driving the functionality of an interactive pinball playfield.
+// The playfield intends to update scoring based on the ideas of baseball at each base (single, double, triple) and 
+// outfield (homerun). The functionality updates pins HIGH/LOW to launch the ball back after the photoresistor 
+// inside each hole detects the ball.
 
-// Need to decide points multiplier
-// how to pass points and symbolization of output aka "SINGLE!" to Jacob
-// How to move/speed of servo, SPI needed?
+#include <Servo.h>
+
+#define thermPinS A1  // Single
+#define thermPinD A0 // Double
+#define thermPinT A2  // Triple
+#define thermPinH A3  // Homerun
+
+// read pins
+#define sPinO 2
+#define sPinT 3
+#define sPinTH 4
 
 
-//first base 
-const int firstBaseT = 0;
-const int firstBaseS = 1;
 
-//second base 
-const int secondBaseT = 2;
-const int secondBaseS = 3;
+int pos = 0; // servo postion
 
-//first base 
-const int thirdBaseT = 4;
-const int thirdBaseS = 5;
+// set of servos
+Servo myServoO;
+Servo myServoT;
+Servo myServoTH;
+Servo myServoF;
 
-//first base 
-const int fourthBaseT = 6;
-const int fourthBaseS = 7;
 
-int score = 0;
-
-void setup()
-{
+void setup() {
+  
   Serial.begin(9600);
+  pinMode(thermPinS, INPUT);
+  pinMode(thermPinD, INPUT);
+  pinMode(thermPinT, INPUT);
+  pinMode(thermPinH, INPUT);
 
-  // first base
-  pinMode(firstBaseT, INPUT);
-  pinMode(firstBaseS, INPUT);
-
-  // second base
-  pinMode(firstBaseT, INPUT);
-  pinMode(firstBaseS, INPUT);
-
-  // third base
-  pinMode(firstBaseT, INPUT);
-  pinMode(firstBaseS, INPUT);
-
-  // fourth base
-  pinMode(firstBaseT, INPUT);
-  pinMode(firstBaseS, INPUT);
+  pinMode(sPinO, OUTPUT);
+  pinMode(sPinT, OUTPUT);
+  pinMode(sPinTH, OUTPUT);
+ 
+  myServoO.attach(7);
+  myServoT.attach(8);
+  myServoTH.attach(9);
+  myServoF.attach(10);
+  myServoO.write(0);
+  myServoT.write(0);
+  myServoTH.write(0);
+  myServoF.write(0);
+ 
 
 }
-// Read phototransistor light levels, display raw and converted analog values.
-// Produce varying intensity LED levels
-void loop()
-{
 
-  // First base --> dunno if needed for S
-  int firstValT = analogRead(firstBaseT);
-  int firstValS = analogRead(firstBaseS);
+void loop() {
 
-  // Second base
-  int secondValT = analogRead(secondBaseT);
-  int secondValS = analogRead(secondBaseS);
+ digitalWrite(sPinO,LOW); // 001
+ digitalWrite(sPinT, LOW);
+ digitalWrite(sPinTH, LOW);
 
-  // Third base
-  int thirdValT = analogRead(thirdBaseT);
-  int thirdValS = analogRead(thirdBaseS);
+ /* check values of photoresistors
+ int thermValS = analogRead(thermPinS);
+ int thermValD = analogRead(thermPinD);
+ int thermValT = analogRead(thermPinT);
+ int thermValH = analogRead(thermPinH); */
 
-
-  // Fourth base
-  int fourthValT = analogRead(fourthBaseT);
-  int fourthValS = analogRead(fourthBaseS);
-
-  // First Base
-  if (firstValtT < 500 /*threshold determine*/) {
-    delay(100);
-    //set servo low
-    delay(200);
-    score += 1;
-    // set servo high
-    Serial.println("Single");
-  }
-
-  // Second Base
-  if (secondValtT < 500 /*threshold determine*/) {
-    delay(100);
-    //set servo low
-    delay(200);
-    score += 2;
-    // set servo high
-    Serial.println("Double");
-  }
-
-  // Third Base
-  if (thirdValtT < 500 /*threshold determine*/) {
-    delay(100);
-    //set servo low
-    delay(200);
-    score += 3;
-    // set servo high
-    Serial.println("Triple");
-  }
-
-  // Fourth Base
-  if (fourthValtT < 500 /*threshold determine*/) {
-    delay(100);
-    //set servo low
-    delay(2);
-    score += 4;
-    // set servo high
-    Serial.println("HomeRun");
-  }
-
-  return score;
+ Serial.println(thermValS);
+ Serial.println(thermValD);
+ Serial.println(thermValT);
+ Serial.println(thermValH);
  
+  delay(500);
+ 
+  // Single
+  if (thermValS < 500) { // dark factor
+    myServoO.write(180);
+    delay(1000);
+    myServoO.write(0);
+    digitalWrite(sPinO, HIGH);
+    digitalWrite(sPinT, LOW);
+    digitalWrite(sPinTH, LOW);
+    Serial.println("1");
+    delay(500);
+
+  }
+
+ 
+   // Double
+  if (thermValD < 80) { // dark factor
+    myServoT.write(60);
+    delay(1000);
+    myServoT.write(0);
+    digitalWrite(sPinO, LOW); // 010
+    digitalWrite(sPinT, HIGH);
+    digitalWrite(sPinTH, LOW);
+    Serial.println("2");
+    delay(500);
+  }
+
+   // Triple
+  if (thermValT < 100) { // dark factor
+    myServoTH.write(180);
+    delay(1000);
+    myServoTH.write(0);
+    digitalWrite(sPinO, LOW);
+    digitalWrite(sPinT, LOW);
+    digitalWrite(sPinTH, HIGH);
+    Serial.println("3");
+    delay(500);
+  }
+
+   // Homerun
+  if (thermValH < 100) { // dark factor
+    myServoF.write(180);
+    delay(1000);
+    myServoF.write(0);
+    digitalWrite(sPinO, LOW); 
+    digitalWrite(sPinT, HIGH);
+    digitalWrite(sPinTH, HIGH);
+    Serial.println("4");
+    delay(500);
+  }
 }
